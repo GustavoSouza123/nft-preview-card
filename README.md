@@ -1,4 +1,4 @@
-# Article Preview Component
+# NFT Preview Card Component
 
 This is my second Frontent Mentor challenge. See a demo on [my portfolio website](https://gustavo-souza.com/)
 
