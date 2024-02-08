@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue: hsl(215, 51%, 70%);
+    --cyan: #00fff7;
+    --cyan-overlay: #00fff777;
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --subtitle: #849bbc;
+    --white: hsl(0, 0%, 100%);1
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+}
+
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--main-bg);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 90%;
+    max-width: 350px;
+    height: 580px;
+    max-height: 600px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.card .top {
+    position: relative;
+    height: 300px;
+    cursor: pointer;
+}
+
+.card .top > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card .top .overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--cyan-overlay);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: .2s;
+    opacity: 0;
+}
+
+.card .top:hover .overlay {
+    opacity: 1;
+}
+
+.card .bottom .title {
+    margin: 20px 0;
+    font-weight: 400;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.card .bottom .title:hover {
+    color: var(--cyan)
+}
+
+.card .bottom .subtitle {
+    font-weight: 300;
+    color: var(--subtitle);
+}
+
+.card .bottom .infos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.card .bottom .infos > div {
+    display: flex;
+    align-items: center;
+}
+
+.card .bottom .infos img {
+    margin-right: 10px;
+}
+
+.card .bottom .infos .eth {
+    color: var(--cyan);
+}
+
+.card .bottom .infos .days {
+    color: var(--subtitle);
+}
+
+.card .bottom .creation {
+    border-top: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.card .bottom .creation .image {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+}
+
+.card .bottom .creation .image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.card .bottom .creation div {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--subtitle);
+}
+
+.card .bottom .creation div span {
+    color: var(--white);
+    transition: .2s;
+    cursor: pointer;
+}
+
+.card .bottom .creation div span:hover {
+    color: var(--cyan);
+}
+
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    padding: 20px 50px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300px;
+}
+
+a:link {
+    color: var(--cyan);
+}
+
+a:visited {
+    color: var(--subtitle);
+}
